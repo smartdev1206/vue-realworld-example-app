@@ -1,0 +1,43 @@
+$font-path: "../fonts/";
+
+@mixin font($font-family, $file-name, $font-weight) {
+  @font-face {
+    font-family: $font-family;
+    src: local(''),
+      // url($font-path+$file-name+".eot"),
+        //   url($font-path+$file-name+".eot?#iefix") format("embedded-opentype"),
+        //   url($font-path+$file-name+".woff") format("woff"),
+        //   url($font-path+$file-name+".svg#"+$font-family) format("svg"),
+        //   url($font-path+$file-name+".ttf") format("truetype"),
+        url($font-path+$file-name+".ttf") format("truetype");
+    font-weight: $font-weight;
+    font-style: normal;
+  }
+}
+
+@mixin font-italic($font-family, $file-name, $font-weight) {
+  @font-face {
+    font-family: $font-family;
+    src: local(''),
+      // url($font-path+$file-name+".eot"),
+        //   url($font-path+$file-name+".eot?#iefix") format("embedded-opentype"),
+        //   url($font-path+$file-name+".woff") format("woff"),
+        //   url($font-path+$file-name+".svg#"+$font-family) format("svg"),
+        //   url($font-path+$file-name+".ttf") format("truetype"),
+        url($font-path+$file-name+".ttf") format("truetype");
+    font-weight: $font-weight;
+    font-style: italic;
+  }
+}
+
+@include font("Titillium Web", "TitilliumWeb-Bold", 700);
+@include font("Source Serif Pro", "SourceSerifPro-Regular", 400);
+@include font("Source Serif Pro", "SourceSerifPro-Bold", 700);
+@include font("Source Sans Pro", "SourceSerifPro-Light", 300);
+@include font-italic("Source Sans Pro", "SourceSansPro-LightItalic", 300);
+@include font("Source Sans Pro", "SourceSansPro-Regular", 400);
+@include font-italic("Source Sans Pro", "SourceSansPro-Italic", 400);
+@include font("Source Sans Pro", "SourceSansPro-SemiBold", 600);
+@include font-italic("Source Sans Pro", "SourceSansPro-SemiBoldItalic", 600);
+@include font("Source Sans Pro", "SourceSansPro-Bold", 700);
+@include font-italic("Source Sans Pro", "SourceSansPro-BoldItalic", 700);

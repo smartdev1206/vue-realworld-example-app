@@ -41,6 +41,7 @@ const actions = {
     context.commit(PURGE_AUTH);
   },
   [REGISTER](context, credentials) {
+    console.log("context, credentials", context, credentials);
     return new Promise((resolve, reject) => {
       ApiService.post("users", { user: credentials })
         .then(({ data }) => {
